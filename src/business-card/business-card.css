@@ -1,0 +1,147 @@
+.business-card {
+    width: 700px;
+    height: auto;
+    margin: 2rem auto;
+}
+
+.business-card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.business-card.flipped .business-card-inner {
+    transform: rotateY(180deg);
+}
+
+.business-card-front{
+    position: absolute;
+    width: auto;
+    height: auto;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: black;
+    border: 3px solid white;
+    border-radius: 15px;
+    padding: 3%;
+}
+
+
+.business-card-front div:nth-child(2){
+    padding: 10px;
+}
+
+.business-card-front img{
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 45%;
+    height: auto;
+}
+
+.business-card-front {
+    transform: rotateY(0deg);
+}
+
+.business-card-back {
+    transform: rotateY(180deg);
+}
+
+.logo {
+    width: 70%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 150%;
+    font-weight: bold;
+    color: white;
+}
+
+.slogan {
+    font-size: 80%;
+    font-style: italic;
+}
+
+p {
+    color: white;
+}
+
+.content li{
+    font-size: 80%;
+    color: white;
+}
+
+.business-card-back{
+    position: absolute;
+    width: 700px;
+    height: auto;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+    border: 3px solid white;
+    border-radius: 15px;
+    padding: 3%;
+}
+
+
+.qr-code-large {
+    width: 30%;
+    height: auto;
+}
+
+
+@media (max-width: 768px) {
+    .business-card {
+        width: 80%;
+    }
+
+    .content{
+        align-items: center;
+    }
+
+    .business-card-front
+    {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 5%;
+    }
+
+    .business-card-back{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10%;
+        width: 90%;
+    }
+
+    .business-card-front img,
+    {
+        width: 70%; /* Adjust image size for smaller screens */
+    }
+
+    .logo {
+        width: 50%; /* Adjust logo size for smaller screens */
+    }
+
+    h1 {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+
+    .content li {
+        font-size: 0.7em; /* Adjust font size for smaller screens */
+    }
+
+    .qr-code-large {
+        width: 30%; /* Adjust QR code size for smaller screens */
+    }
+}
